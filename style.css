@@ -1,0 +1,15 @@
+body{
+  color: rgba(140, 196, 97, 1);
+
+}
+
+.panel{
+  width: 800px;
+  height: 158px;
+  top: 62px;
+  left: 240px;
+  border-radius: 13px;
+  border: 2px;
+  border-color: rgba(255, 255, 255, 1);
+
+}
