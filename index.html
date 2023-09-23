@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"/ >
+    <link rel="stylesheet" href="style.css" >
     <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
   <div class= "panel">
@@ -17,22 +18,30 @@
     </div>
   
   </div>
-  <div class="choice">
-    <div class="rock">
+  <div id="choice" class="choice">
+    <div id="rock" class="rock">
       <img  src="icon-rock.png">
     </div> 
-    <div class="line"></div>
-    <div class="scissor">
+    <div  class="line"></div>
+    <div id="scissor" class="scissor">
       <img  src="icon-scissor.png">
     </div>
-    <div class="paper"> 
+    <div id="paper" class="paper"> 
       <img  src="icon-hand.png">
     </div>
-    
-    
   </div>
   
-
-
+    <button class="rules" id="rules" onclick="pop()"> RULES</button>
+  <div id="popup">
+    <button id="c" onclick="close()"><i class="fa fa-close" style="color:white"></i></button>
+    <ul> <span style="color: white; font-size: 30px; font-style: bold;">Game Rules</span>
+      <li><span> Rock beats scissors, scissors beat paper, and paper beats rock.</span></li>
+      <li><span>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</span></li>
+      <li><span>Use rock, paper, scissors to settle minor decisions or simply play to pass the time.</span></li>
+      <li><span>If both players lay down the same hand, each player lays down another hand.</span></li>
+    </ul>
+  </div>
+  
 </body>
+<script src="script.js" charset="utf-8"></script>
 </html>
