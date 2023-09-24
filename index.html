@@ -12,9 +12,11 @@
     Rock <br> Paper <br> Scissor 
     <div class="score1">
         Computer Score
+        <input type="text" id="computerScore" style="border: none;" readonly>
     </div>
     <div class="score2">
         Your <br> Score
+        <input type="text" id="yourScore" style="border: none;" readonly>
     </div>
   
   </div>
@@ -27,10 +29,141 @@
       <img  src="icon-scissor.png">
     </div>
     <div id="paper" class="paper"> 
-      <img  src="icon-hand.png">
+      <img  src="icon-paper.png">
     </div>
   </div>
-  
+
+ <div class="result" class="hidden" id="resultPanel"> 
+  <div class="rockResult" id="rockResult"> <!-- div block to show rock's result-->
+    <div id="rockTie" class="hidden">
+      <div id="rock" class="rock">
+        <img  src="icon-rock.png">
+      </div> 
+      <div>
+        <h2>TIE UP</h2>
+        <button id="replay">Replay</button>
+      </div>
+      <div id="rock" class="rock">
+        <img  src="icon-rock.png">
+      </div> 
+    </div>
+
+    <div id="rockWin" class="hidden">
+      <div id="rock" class="rock">
+        <img  src="icon-rock.png">
+      </div>
+      <div>
+        <h2>You Win</h2>
+        <h5>AGAINST PC</h5>
+        <button id="replay">Play Again</button>
+      </div>
+      <div id="scissor" class="scissor">
+        <img  src="icon-scissor.png">
+      </div>
+    </div> 
+
+    <div id="rockLoss" class="hidden">
+      <div id="rock" class="rock">
+        <img  src="icon-rock.png">
+      </div> 
+      <div>
+        <h2>You Lost</h2>
+        <h5>AGAINST PC</h5>
+        <button id="replay">Play Again</button>
+      </div>
+      <div id="paper" class="paper"> 
+        <img  src="icon-paper.png">
+      </div>
+    </div>
+</div>
+
+  <div class="scissorResult" style="margin: auto;">  <!-- div block to show scissor's result-->
+    <div id="scissorLoss" class="hidden">
+      <div id="scissor" class="scissor">
+        <img  src="icon-scissor.png">
+      </div>
+      <div>
+        <h2>You Lost</h2>
+        <h5>AGAINST PC</h5>
+        <button id="replay"> Play Again</button>
+      </div>
+      <div id="rock" class="rock">
+        <img  src="icon-rock.png">
+      </div> 
+    </div>  
+
+    <div id="scissorTie" class="hidden">
+      <div id="scissor" class="scissor">
+        <img  src="icon-scissor.png">
+      </div>
+      <div>
+        <h2>TIE UP</h2>
+        <button id="replay">Replay</button>
+      </div>
+      <div id="scissor" class="scissor">
+        <img  src="icon-scissor.png">
+      </div>
+    </div>
+
+    <div id="scissorWin" class="hidden">
+      <div id="scissor" class="scissor">
+        <img  src="icon-scissor.png">
+      </div>
+      <div>
+        <h2>You Win</h2>
+        <h5>AGAINST PC</h5>
+        <button id="replay">Play Again</button>
+      </div>
+      <div id="paper" class="paper"> 
+        <img  src="icon-paper.png">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="paperResult">  <!-- div block to show paper's result-->
+    <div id="paperWin" class="hidden">
+      <div id="paper" class="paper"> 
+        <img  src="icon-paper.png">
+      </div>
+      <div>
+        <h2>You Win</h2>
+        <h5>AGAINST PC</h5>
+        <button id="replay">Play Again</button>
+      </div>
+      <div id="rock" class="rock">
+        <img  src="icon-rock.png">
+      </div>
+  </div>
+
+    <div id="paperLost" class="hidden">
+      <div id="paper" class="paper"> 
+        <img  src="icon-paper.png">
+      </div>
+      <div>
+        <h2>You Lost</h2>
+        <h5>AGAINST PC</h5>
+        <button id="replay">Play Again</button>
+      </div>
+      <div id="scissor" class="scissor">
+        <img  src="icon-scissor.png">
+      </div>
+    </div>
+
+    <div id="paperTie" class="hidden">
+      <div id="paper" class="paper"> 
+        <img  src="icon-paper.png">
+      </div>
+      <div>
+        <h2>TIE UP</h2>
+        <button id="replay">Replay</button>
+      </div>
+      <div id="paper" class="paper"> 
+        <img  src="icon-paper.png">
+      </div>
+  </div>
+  </div>
+</div>
     <button class="rules" id="rules" onclick="pop()"> RULES</button>
   <div id="popup">
     <button id="c" onclick="close()"><i class="fa fa-close" style="color:white"></i></button>
