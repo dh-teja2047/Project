@@ -31,15 +31,19 @@ body{
   height: 130px;
   margin-right: 60px;
   font-family: Roboto;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 20px;
+  font-size: 25px;
+  font-weight: 600px;
+  line-height: 25px;
   letter-spacing: 0.1em;
   text-align: center;
   background-color: rgba(255, 255, 255, 1);
   color: rgba(101, 101, 101, 1);
 }
-
+.panel>h1{
+  margin-left: 10px;
+  font-family: Roboto;
+  font-weight: bold;
+}
 .score2{
   display: inline-block;
   margin-top: 15px;
@@ -47,9 +51,9 @@ body{
   width: 160px;
   height: 130px;
   font-family: Roboto;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 600;
-  line-height: 20px;
+  line-height: 25px;
   letter-spacing: 0.1em;
   text-align: center;
   background-color: rgba(255, 255, 255, 1);
@@ -57,23 +61,36 @@ body{
 }
 
 #computerScore{
-  font-size: 30px;
+  font-size: 35px;
   font: bold;
   width: 150px;
   height: 60px;
   text-align: center;
+  font-size: 25px;
+  line-height: 25px;
+  color: rgba(37, 37, 37, 1);
+  font-size: 50px;
+  line-height: 25px;
+  font-weight: bold;
+  /* color: ; */
 }
 
 #yourScore{
-  font-size: 30px;
+  font-size: 35px;
   font: bold;
   width: 150px;
   height: 60px;
   text-align: center;
+  font-size: 25px;
+  line-height: 25px;
+  color:  rgba(37, 37, 37, 1);
+  font-size: 50px;
+  line-height: 25px;
+  font-weight: bold;
 }
 
 .choice{
-  height: 700px;
+  height: 650px;
   width: 700px;
   display: flex;
   margin: auto;
@@ -87,8 +104,8 @@ body{
 
 .rock {
   display: inline-block;
-  width: 100px;
-  height: 100px;
+  width: 140px;
+  height: 140px;
   margin-top:150px;
   margin-left: 110px;
   border-radius: 60%;
@@ -98,7 +115,6 @@ body{
   background-color: rgba(255, 255, 255, 1);
   transition: border-width;
   cursor: pointer;
-
 }
 
 
@@ -108,7 +124,7 @@ body{
 }*/
 
 .rock img{
-  padding:10px;
+  padding:22px;
   /*display: inline-flex;*/
 }
 
@@ -123,8 +139,8 @@ body{
 .scissor{
   margin-top:150px;
   display: inline-block;
-  width: 100px;
-  height: 100px;
+  width: 140px;
+  height: 140px;
   border-top:1000px;
   border-radius: 60%;
   border-style: solid;
@@ -135,15 +151,15 @@ body{
 }
 
 .scissor img{
-  padding: 25px;
+  padding: 35px;
 }
 
 .paper{
   display: inline-block;
   margin-top: 400px;
   margin-left: -250px;
-  width: 100px;
-  height: 100px;
+  width: 140px;
+  height: 140px;
   border-radius: 60%;
   border-style: solid;
   border-width: 10px;
@@ -153,7 +169,7 @@ body{
 }
 
 .paper img{
-  padding: 10px;
+  padding: 23px;
 }
 
 .rules{
@@ -188,8 +204,8 @@ body{
   position: fixed;
   bottom: 55px;
   right: 30px;
-  height: 325px;
-  width: 290px;
+  height: 420px;
+  width: 300px;
   display: none;
   border-style: solid;
   border-width: 5px;
@@ -197,9 +213,9 @@ body{
   border-color: white;
   background-color: rgba(0, 68, 41, 1);
 }
-  ul {
-    list-style: none;
-  }
+ul {
+  list-style: none;
+}
 ul li::before {
   content: "\25A0";
   color:  rgba(255, 214, 0, 1);
@@ -255,6 +271,11 @@ li span{
 
 #resultPanel{
   color: white;
-  font-size:30px;
+  font-size:50px;
   font: bold;
+  display: none;
+}
+
+#resultPanel h2{
+  font-size:50px;
 }

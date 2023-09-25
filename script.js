@@ -1,10 +1,7 @@
-//var computerScore = document.getElementById('computerScore'); 
-
-
 var cc = document.getElementById('choice'); //computer choice
-const rules = document.getElementById('rules'); 
-const c = document.getElementById('c'); //computer
-const pop = document.getElementById('popup');
+var rules = document.getElementById('rules'); 
+var c = document.getElementById('c'); //close the popup
+var pop = document.getElementById('popup');
 
 rules.addEventListener('click', () => {
     pop.style.display = 'block';
@@ -20,24 +17,34 @@ var paper = document.getElementById('paper');
 var scissor = document.getElementById('scissor');
 
 
-rock.addEventListener("click", () => {
+    rock.addEventListener("click", () => {
     var r = 0;
     var c = Math.floor(Math.random()*3);
     console.log(r);
     console.log(c);    
     
     var resultPanel = document.getElementById('resultPanel');
-    resultPanel.style.display = 'flex';
+   resultPanel.style.display = 'flex';
 
+   
     var cc = document.getElementById('choice');
     cc.classList.add('hidden'); 
+
     if(c === 0){
         console.log('Tie')
-        var rTc = document.getElementById('rockTie'); //rock Tie with computer
+       var rTc = document.getElementById('rockTie'); //rock Tie with computer
         rTc.classList.remove('hidden');
         rTc.style.display = 'flex';
         document.getElementById('computerScore').value = '0';
         document.getElementById('yourScore').value = '0';
+
+/*
+       var youPicked = document.getElementById('choice').children[0];
+       var rock = document.getElementById('rock');
+        youPicked.replaceChild(rock, youPicked.childNodes[0]);
+        //youPicked.innerHTML = rock;
+        //pcPicked.innerHTML = rock;
+*/
     }
     else if(c === 1){
         console.log('Win')
@@ -47,6 +54,9 @@ rock.addEventListener("click", () => {
         document.getElementById('computerScore').value = '0';
         document.getElementById('yourScore').value = '1';
 
+        //youPicked.innerHTML = rock;
+        //pcPicked.innerHTML = scissor;
+
     }
     else if(c === 2){
         console.log('Lost')
@@ -55,6 +65,9 @@ rock.addEventListener("click", () => {
         rLc.style.display = 'flex';
         document.getElementById('computerScore').value = '1';
         document.getElementById('yourScore').value = '0';
+
+        //youPicked.innerHTML = rock;
+        //pcPicked.innerHTML = paper;
 
     }  
 });
