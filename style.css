@@ -1,3 +1,8 @@
+@media only screen and (max-width:320px){
+  #resultPanel{
+    margin: 100px 0px 0px 0px !important;
+  }
+}
 body{
   background-color: rgba(140, 196, 97, 1);
 }
@@ -72,7 +77,6 @@ body{
   font-size: 50px;
   line-height: 25px;
   font-weight: bold;
-  /* color: ; */
 }
 
 #yourScore{
@@ -94,12 +98,6 @@ body{
   width: 700px;
   display: flex;
   margin: auto;
-  
-}
-
-.result{
-  display: flex;
-  margin: auto;
 }
 
 .rock {
@@ -117,23 +115,16 @@ body{
   cursor: pointer;
 }
 
-
-/*
-.rock:hover{
-  border-width: 10px;
-}*/
-
 .rock img{
   padding:22px;
-  /*display: inline-flex;*/
 }
 
-.line::before {
+.line1::before {
   margin-top:210px;
   content: "";
   display: block;
-  border-top: 10px solid #000; /* Adjust thickness and color as needed */
-  width: 150px; /* Adjust the width as needed */
+  border-top: 20px solid #000000a3;
+  width: 150px; 
 }
 
 .scissor{
@@ -142,7 +133,7 @@ body{
   width: 140px;
   height: 140px;
   border-top:1000px;
-  border-radius: 60%;
+  border-radius: 60%; 
   border-style: solid;
   border-width: 10px;
   border-color: rgba(189, 0, 255, 1);
@@ -157,7 +148,7 @@ body{
 .paper{
   display: inline-block;
   margin-top: 400px;
-  margin-left: -250px;
+  margin-left: -280px;
   width: 140px;
   height: 140px;
   border-radius: 60%;
@@ -194,18 +185,32 @@ body{
   color:rgba(140, 196, 97, 1);
 }
 
-#c{
-  float: right;
-  font-size:24px; border-radius:18px; background-color:red;
+#c:hover{
+  border: 3px solid rgba(255, 255, 255, 1);
 }
+
+#c{
+  margin-right: -36px;
+  margin-top: -22px;
+  float: right;
+  font-size: 24px;
+  border-radius: 50%;
+  background-color: red;
+  width: 60px;
+  align-items: center;
+  height: 60px;
+  justify-content: center;
+  border: 5px solid rgba(255, 255, 255, 1);
+}
+
 #popup{
   padding-right: 20px;
   text-align: justify;
   position: fixed;
   bottom: 55px;
   right: 30px;
-  height: 420px;
-  width: 300px;
+  height: 355px;
+  width: 278px;
   display: none;
   border-style: solid;
   border-width: 5px;
@@ -219,33 +224,20 @@ ul {
 ul li::before {
   content: "\25A0";
   color:  rgba(255, 214, 0, 1);
-  display: inline-block; 
+  display: inline; 
   width: 1em;
 }
 
-li span{
+li p{
   color: white;
-  font-size: 15px;
+  font-size: 13px;
+  display: inline;
+  line-height: 15px;
 }
 
 .hidden {
   display: none;
 }
-
-#resultPanel{
-  display: none;
-}
-.result{
-  margin-top: 110px;
-  height: 400px;
-  width: 700px;
-  display: flex;
-}
-.rockResult{
-  margin: auto;
-}
-
-
 
 #replay{
   width: 120px;
@@ -260,7 +252,6 @@ li span{
   border-color: white;
   border-width: 2px;
   transition-duration: 0.4s;
-
 }
 
 #replay:hover{
@@ -269,13 +260,120 @@ li span{
   border-color: white;
 }
 
-#resultPanel{
-  color: white;
-  font-size:50px;
-  font: bold;
-  display: none;
+.image1{
+    margin-left: 45px;
 }
 
-#resultPanel h2{
-  font-size:50px;
+.image1, .image2{
+  border: 5px;
+  border-style: solid;
+  text-align: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 60%; 
+  border-width: 12px;
+  justify-content: center;
+  background-color: white;
+  margin: 75px 0px 0px 75px;
+}
+
+.image1 img{
+  margin-top: 30px;
+}
+
+.image2 img{
+  margin-top: 30px;
+} 
+
+.circle{
+  border-radius: 60%;
+  position: absolute; 
+  z-index: -1;
+}
+
+.outer{
+  width: 300px;
+  height: 300px;
+  background-color: rgba(46, 154, 37, 0.39);
+}
+
+.middle{
+  width: 250px;
+  height: 250px;
+  background-color: rgba(29, 168, 43, 0.79);
+  transform: translate(10%, 10%);
+}
+
+.inner{
+  width: 200px;
+  height: 200px;
+  background-color: rgba(59, 103, 32, 1);
+  transform: translate(25%, 25%);
+}
+
+.comment{
+  margin-left: 25px;
+  margin-top: 40px;
+  color: rgba(255, 255, 255, 1);
+  font-family: Roboto;
+}
+
+#yourChoice, #pcChoice{
+  color: rgba(255, 255, 255, 1);
+  font-family: Roboto;
+  font-style: bold;
+  font-size: 17px;
+  text-align: center;
+}
+
+#content{
+  font-family: Roboto;
+  font-size: 39px;
+  color: rgba(255, 255, 255, 1);
+}
+
+#content1{
+  font-family: Roboto;
+  font-size: 25px;
+  color: rgba(255, 255, 255, 1);
+}
+
+#resultPanel{
+  display: flex;
+  margin: 100px 0px 0px 270px;
+  width: 900px;
+  height: 300px;
+}
+
+#col1, #col2, #col3, #yourChoice, #pcChoice, #blank{
+  width: 300px;
+  height: 300px;
+}
+
+#picker{
+  margin: -272px 0px 0px 250px;
+  display: flex;
+  width: 900px;
+  height: 20px;
+  z-index: -1;
+}
+
+.line{
+  width: 260px;
+  height: 0px;
+  border: 10px solid #000000a3;
+}
+
+.leftLine{
+  transform: rotate(60deg);
+  position: relative;
+  right: 54px;
+  top: 104px;
+}
+
+.rightLine{
+  transform: rotate(120deg);
+  position: relative;
+  left: 74px;
+  top: 82px;
 }

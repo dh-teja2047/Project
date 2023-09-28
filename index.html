@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" >
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <title>Rock Paper Scissor</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -24,158 +23,58 @@
   </div>
   
   <div id="choice" class="choice">
-    <div id="rock" class="rock">
+    <div id="rock" class="rock"> 
       <img  src="icon-rock.png">
     </div> 
-    <div  class="line"></div>
+    <div  class="line1"></div>
     <div id="scissor" class="scissor">
       <img  src="icon-scissor.png">
     </div>
     <div id="paper" class="paper"> 
       <img  src="icon-paper.png">
     </div>
+    <div class="lines" style="margin: 250px -100px 0px -212px; z-index: -1;" >
+      <div class="leftLine line"></div>
+      <div class="rightLine line"></div>
+    </div>
   </div>
 
- <div class="result" class="hidden" id="resultPanel"> 
-  <div class="rockResult" id="rockResult"> <!-- div block to show rock's result-->
-    <div id="rockTie" class="hidden">
-      <div id="rock" class="rock col" style="margin-top: 0px; margin-left: 0px;">
-        <img  src="icon-rock.png">
-      </div> 
-      <div class="col p-3">
-        <h2>TIE UP</h2>
-        <button id="replay">Replay</button>
-      </div>
-      <div id="rock" class="rock col" style="margin-top: 0px; margin-left: 0px;">
-        <img  src="icon-rock.png">
-      </div> 
+<div id="resultPanel" style="display: none;">
+  <div id="col1">
+    <div class="circle outer" id="leftOuterCircle" style="display:none"></div>
+    <div class="circle middle" id="leftMiddleCircle" style="display:none"></div>
+    <div class="circle inner" id="leftInnerCircle" style="display:none"></div>
+    <div class="image1" id="image1">
+      <img src="icon-rock.png" id="rockImage">
     </div>
-
-    <div id="rockWin" class="hidden">
-      <div id="rock" class="rock" style="margin-top:0px">
-        <img  src="icon-rock.png">
-      </div>
-      <div>
-        <h2>You Win</h2>
-        <h5>AGAINST PC</h5>
-        <button id="replay">Play Again</button>
-      </div>
-      <div id="scissor" class="scissor" style="margin-top:0px">
-        <img  src="icon-scissor.png">
-      </div>
-    </div> 
-
-    <div id="rockLoss" class="hidden" style="padding: 10px;">
-      <div id="rock" class="rock" style="margin-top: 0px; margin-right:20px">
-        <img  src="icon-rock.png">
-      </div>
-      <div>
-        <h2>You Loss</h2>
-        <h5>AGAINST PC</h5>
-        <button id="replay">Play Again</button>
-      </div>
-      <div id="paper" class="paper" style="margin-top: 0px; margin-left: 0px;">
-        <img  src="icon-paper.png">
-      </div>
-    </div> 
-    </div>
-
-  <div class="scissorResult" style="margin: auto;">  <!-- div block to show scissor's result-->
-    <div id="scissorLoss" class="hidden" >
-      <div id="scissor" class="scissor"style="margin-top: 0px;">
-        <img  src="icon-scissor.png">
-      </div>
-      <div>
-        <h2>You Lost</h2>
-        <h5>AGAINST PC</h5>
-        <button id="replay"> Play Again</button>
-      </div>
-      <div id="rock" class="rock" style="margin-top: 0px; margin-left: 0px;">
-        <img  src="icon-rock.png">
-      </div> 
+  </div>
+  <div id="col2" style="padding: 75px 0px 0px 75px;">
+    <h2 id="content" style="margin-left: -40px;"></h2><h4 id="content1" style="margin-left: -30px;"></h4><button id="replay" onclick="replay()" style="margin-left: -15px">Replay</button>
+  </div>
+  <div id="col3">
+    <div class="circle outer" id="rightOuterCircle" style="display:none"></div>
+    <div class="circle middle" id="rightMiddleCircle" style="display:none"></div>
+    <div class="circle inner" id="rightInnerCircle" style="display:none"></div>
+    <div class="image2" id="image2">
+      <img src="icon-scissor.png" id="scissorImage"></div>
     </div>  
-
-    <div id="scissorTie" class="hidden">
-      <div id="scissor" class="scissor" style="margin-top: 0px;">
-        <img  src="icon-scissor.png">
-      </div>
-      <div>
-        <h2>TIE UP</h2>
-        <button id="replay">Replay</button>
-      </div>
-      <div id="scissor" class="scissor" style="margin-top: 0px;">
-        <img  src="icon-scissor.png">
-      </div>
-    </div>
-
-    <div id="scissorWin" class="hidden">
-      <div id="scissor" class="scissor" style="margin-top: 0px;">
-        <img  src="icon-scissor.png">
-      </div>
-      <div>
-        <h2>You Win</h2>
-        <h5>AGAINST PC</h5>
-        <button id="replay">Play Again</button>
-      </div>
-      <div id="paper" class="paper" style="margin-top: 0px; margin-left: 0px;"> 
-        <img  src="icon-paper.png">
-      </div>
-    </div>
-  </div>
-
-
-  <div class="paperResult">   <!--div block to show paper's result-->
-    <div id="paperWin" class="hidden" style="margin-top: 0px; margin-left: 0px;">
-      <div id="paper" class="paper"> 
-        <img  src="icon-paper.png">
-      </div>
-      <div>
-        <h2>You Win</h2>
-        <h5>AGAINST PC</h5>
-        <button id="replay">Play Again</button>
-      </div>
-      <div id="rock" class="rock" style="margin-top:0px">
-        <img  src="icon-rock.png">
-      </div>
-  </div>
-
-    <div id="paperLost" class="hidden">
-      <div id="paper" class="paper" style="margin-top:0px"> 
-        <img  src="icon-paper.png">
-      </div>
-      <div>
-        <h2>You Lost</h2>
-        <h5>AGAINST PC</h5>
-        <button id="replay">Play Again</button>
-      </div>
-      <div id="scissor" class="scissor" style="margin-top:0px">
-        <img  src="icon-scissor.png">
-      </div>
-    </div>
-
-    <div id="paperTie" class="hidden">
-      <div id="paper" class="paper" style="margin-top: 0px; margin-left: 0px;"> 
-        <img  src="icon-paper.png">
-      </div>
-      <div>
-        <h2>TIE UP</h2>
-        <button id="replay">Replay</button>
-      </div>
-      <div id="paper" class="paper" style="margin-top: 0px; margin-left: 0px;"> 
-        <img  src="icon-paper.png">
-      </div>
-  </div>
   </div>
 </div>
 
-<button class="rules" id="rules" onclick="pop()"> RULES</button>
+<div id="picker" style="display: none;">
+  <div id="yourChoice"><p>YOU PICKED</p></div>
+  <div id="blank" style="height: 10px;"></div>
+  <div id="pcChoice"><p>PC PICKED</p></div>
+</div>
+
+<button class="rules" id="rules"> RULES</button>
   <div id="popup">
     <button id="c" onclick="close()"><i class="fa fa-close" style="color:white"></i></button>
-    <ul> <span style="color: white; font-size: 30px; font-style: bold;">Game Rules</span>
-      <li><span> Rock beats scissors, scissors beat paper, and paper beats rock.</span></li>
-      <li><span>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</span></li>
-      <li><span>Use rock, paper, scissors to settle minor decisions or simply play to pass the time.</span></li>
-      <li><span>If both players lay down the same hand, each player lays down another hand.</span></li>
+    <ul> <h3 style="color: white; font-size: 29px; line-height: 34px;">Game Rules</h3>
+      <li><p> Rock beats scissors, scissors beat paper, and paper beats rock.</p></li>
+      <li><p>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</p></li>
+      <li><p>Use rock, paper, scissors to settle minor decisions or simply play to pass the time.</p></li>
+      <li><p>If both players lay down the same hand, each player lays down another hand.</p></li>
     </ul>
   </div>
  
